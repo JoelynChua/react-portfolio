@@ -1,7 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
 import imageOverlay from "../img/earth.jpg";
+import emailjs from "emailjs-com";
 
-class Contact extends React.Component {
+class Contact extends Component {
+  sendEmail = (e) => {
+    e.preventDefault();
+
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    emailjs
+      .sendForm(serviceID, templateID, e.target, publicKey)
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          alert("Failed to send message. Try again.");
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
+  };
+
   render() {
     return (
       <section
@@ -20,70 +43,43 @@ class Contact extends React.Component {
                         <h5 className="title-left">Send A Message</h5>
                       </div>
                       <div>
-                        <form
-                          action="https://formspree.io/xdoeonlo"
-                          method="POST"
-                          className="contactForm"
-                        >
-                          <div id="sendmessage">
-                            Your message has been sent. Thank you!
-                          </div>
-                          <div id="errormessage"></div>
+                        <form onSubmit={this.sendEmail} className="contactForm">
                           <div className="row">
                             <div className="col-md-12 mb-3">
-                              <div className="form-group">
-                                <input
-                                  type="text"
-                                  name="name"
-                                  className="form-control"
-                                  id="name"
-                                  placeholder="Your Name"
-                                  data-rule="minlen:4"
-                                  data-msg="Please enter at least 4 chars"
-                                />
-                                <div className="validation"></div>
-                              </div>
+                              <input
+                                type="text"
+                                name="name"
+                                className="form-control"
+                                placeholder="Your Name"
+                                required
+                              />
                             </div>
                             <div className="col-md-12 mb-3">
-                              <div className="form-group">
-                                <input
-                                  type="email"
-                                  className="form-control"
-                                  name="email"
-                                  id="email"
-                                  placeholder="Your Email"
-                                  data-rule="email"
-                                  data-msg="Please enter a valid email"
-                                />
-                                <div className="validation"></div>
-                              </div>
+                              <input
+                                type="email"
+                                name="email"
+                                className="form-control"
+                                placeholder="Your Email"
+                                required
+                              />
                             </div>
                             <div className="col-md-12 mb-3">
-                              <div className="form-group">
-                                <input
-                                  type="text"
-                                  className="form-control"
-                                  name="subject"
-                                  id="subject"
-                                  placeholder="Subject"
-                                  data-rule="minlen:4"
-                                  data-msg="Please enter at least 8 chars of subject"
-                                />
-                                <div className="validation"></div>
-                              </div>
+                              <input
+                                type="text"
+                                name="subject"
+                                className="form-control"
+                                placeholder="Subject"
+                                required
+                              />
                             </div>
                             <div className="col-md-12 mb-3">
-                              <div className="form-group">
-                                <textarea
-                                  className="form-control"
-                                  name="message"
-                                  rows="5"
-                                  data-rule="required"
-                                  data-msg="Please write something for us"
-                                  placeholder="Message"
-                                ></textarea>
-                                <div className="validation"></div>
-                              </div>
+                              <textarea
+                                name="message"
+                                rows="5"
+                                className="form-control"
+                                placeholder="Message"
+                                required
+                              ></textarea>
                             </div>
                             <div className="col-md-12">
                               <button
@@ -115,41 +111,36 @@ class Contact extends React.Component {
                                 <li><span class="ion-email"></span> contact@example.com</li>
                                 </ul> --> */}
                       </div>
+
+
+
                       <div className="socials">
                         <ul>
-                          <li>
-                            <a
-                              href=""
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
+
+                          {/* <li>
+                            <a href="" target="_blank" rel="noopener noreferrer" >
                               <span className="ico-circle">
                                 <i className="ion-social-codepen"></i>
                               </span>
                             </a>
-                          </li>
+                          </li> */}
+
                           <li>
-                            <a
-                              href=""
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                            <a href="https://github.com/JoelynChua" target="_blank" rel="noopener noreferrer" >
                               <span className="ico-circle">
                                 <i className="ion-social-github"></i>
                               </span>
                             </a>
                           </li>
+
                           <li>
-                            <a
-                              href=""
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                            <a href="https://www.linkedin.com/in/joelynchuawl/" target="_blank" rel="noopener noreferrer">
                               <span className="ico-circle">
                                 <i className="ion-social-linkedin"></i>
                               </span>
                             </a>
                           </li>
+
                         </ul>
                       </div>
                     </div>

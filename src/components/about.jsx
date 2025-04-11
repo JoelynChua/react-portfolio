@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../img/myImage.png";
+import myImage from "../img/my-images/linkedIn pic.jpg";
 
 class About extends React.Component {
   constructor() {
@@ -44,17 +44,25 @@ class About extends React.Component {
         {
           id: "first-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+            "Hi! I'm Joelyn — an enthusiastic and driven Year 2 student from the School of Information Systems at Singapore Management University. I’m passionate about building intuitive, user-centered websites and applications that make a real impact."
         },
         {
           id: "second-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+            "My journey in tech began with a diploma in Information Technology at Temasek Polytechnic, where I laid the foundation for my skills in software development. Since then, I’ve continued to deepen my expertise, especially in UI/UX design and full-stack web development."
         },
         {
           id: "third-p-about",
           content:
-            "Lorem ipsum pariatur consectetur laboris occaecat nulla aliqua irure ad deserunt duis. Eiusmod nulla cupidatat labore sint sit aute dolore irure nostrud ut incididunt. Anim laborum reprehenderit labore magna ut dolore quis irure. Labore ea duis deserunt ullamco irure fugiat deserunt ut nisi ea minim proident. Nisi consectetur do non magna duis aliqua minim minim veniam. In occaecat minim qui consequat elit mollit consectetur non id tempor. Amet adipisicing occaecat tempor culpa quis est duis."
+            "I love creating digital experiences that are not only functional but also meaningful. I’m currently seeking opportunities in software development where I can grow, contribute, and learn alongside like-minded people."
+        },
+        {
+          id: "third-p-about",
+          content:
+            <p>
+              Feel free to reach out to me at{' '}
+              <a href="#contact" style={{ color: 'blue' }}>joelyn.joelynnn@gmail.com</a>
+            </p>
         }
       ]
     };
@@ -85,9 +93,10 @@ class About extends React.Component {
                         </div>
                       </div>
                     </div>
+
                     <div className="skill-mf">
                       {/* <p className="title-s">Skill</p> */}
-                      {this.state.skills.map(skill => {
+                      {/* {this.state.skills.map(skill => {
                         return (
                           <React.Fragment key={skill.id}>
                             <span>{skill.content}</span>{" "}
@@ -106,9 +115,19 @@ class About extends React.Component {
                             </div>
                           </React.Fragment>
                         );
-                      })}
+                      })} */}
+                      <div style={{ textAlign: "center", marginTop: "20px" }}>
+                        <img
+                          src={myImage}
+                          alt="Joelyn Profile"
+                          style={{ width: "100%", maxWidth: "300px", borderRadius: "10px" }}
+                        />
+                      </div>
+
                     </div>
                   </div>
+
+
                   <div className="col-md-6">
                     <div className="about-me pt-4 pt-md-0">
                       <div className="title-box-2">

@@ -1,0 +1,67 @@
+  .prototype-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .signup-btn {
+    margin-left: 20px;
+    background-color: #0f0f23;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+  }
+
+  .signup-btn:hover {
+    background-color: #1a1a30;
+  }
+
+  /* Make sure the parent has position relative */
+  .work-box {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding-bottom: 40px;
+    /* ensures space for the button */
+  }
+
+  /* Center the image */
+  .centered-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 0px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+
+  .work-img img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* keeps aspect ratio */
+  }
+
+  .tech-list {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+
+  .tech-list li {
+    list-style-type: disc;
+    color: #333;
+  }
