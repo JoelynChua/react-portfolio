@@ -31,16 +31,18 @@ import Preloader from './components/preloader';
 
 
 ReactDOM.render(
-    <React.Fragment>
-        <Navbar />
-        <Intro />
-        <About />
-        <Portfolio />
-        <Contact />
-        <BackToTop />
-        <Preloader />
-    </React.Fragment>,
-document.getElementById('root'));
+    <h1 style={{ color: 'black', textAlign: 'center', marginTop: '100px' }}>✅ Hello from Joelyn’s Portfolio</h1>,
+  document.getElementById('root'));
+//     <React.Fragment>
+//         <Navbar />
+//         <Intro />
+//         <About />
+//         <Portfolio />
+//         <Contact />
+//         <BackToTop />
+//         <Preloader />
+//     </React.Fragment>,
+// document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
