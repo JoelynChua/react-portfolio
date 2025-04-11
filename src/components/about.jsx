@@ -53,42 +53,20 @@ class About extends React.Component {
           <div className="row">
             <div className="col-sm-12">
               <div className="box-shadow-full">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="row">
-                      <div className="col-sm-6 col-md-5" style={{ margin: "0 auto" }}>
-                        <div className="about-img" style={{ textAlign: "center" }}>
-                          <img
-                            src={myImage}
-                            alt="Joelyn Profile"
-                            className="img-fluid rounded b-shadow-a"
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="skill-mf">
-                      {/* Optional: Uncomment to show skills */}
-                      {/* <p className="title-s">Skills</p>
-                      {this.state.skills.map(skill => (
-                        <React.Fragment key={skill.id}>
-                          <span>{skill.content}</span>
-                          <span className="pull-right">{skill.porcentage}</span>
-                          <div className="progress">
-                            <div
-                              className="progress-bar"
-                              role="progressbar"
-                              style={{ width: skill.porcentage }}
-                              aria-valuenow={skill.value}
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                            ></div>
-                          </div>
-                        </React.Fragment>
-                      ))} */}
+                <div className="row align-items-center">
+                  {/* Left Column: Image */}
+                  <div className="col-md-6 d-flex justify-content-center">
+                    <div className="about-img text-center">
+                      <img
+                        src={myImage}
+                        alt="Joelyn Profile"
+                        className="img-fluid rounded b-shadow-a"
+                        style={{ maxWidth: '300px', width: '100%', height: 'auto' }}
+                      />
                     </div>
                   </div>
 
+                  {/* Right Column: About Content */}
                   <div className="col-md-6">
                     <div className="about-me pt-4 pt-md-0">
                       <div className="title-box-2">
@@ -102,6 +80,29 @@ class About extends React.Component {
                     </div>
                   </div>
                 </div>
+
+                {/* Optional Skills Section */}
+                {/* 
+                <div className="skill-mf mt-4">
+                  <p className="title-s">Skills</p>
+                  {this.state.skills.map(skill => (
+                    <React.Fragment key={skill.id}>
+                      <span>{skill.content}</span>
+                      <span className="pull-right">{skill.porcentage}</span>
+                      <div className="progress">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{ width: skill.porcentage }}
+                          aria-valuenow={skill.value}
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </React.Fragment>
+                  ))}
+                </div>
+                */}
               </div>
             </div>
           </div>

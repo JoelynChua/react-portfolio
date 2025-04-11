@@ -1,16 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
-//import css in order
+// Import CSS in order
 import 'normalize.css';
 import './animate.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './img/icons/css/ionicons.css';
 import './img/font-awesome/css/font-awesome.css';
-import 'lightbox2/dist/css/lightbox.min.css'
+import 'lightbox2/dist/css/lightbox.min.css';
 import './style.css';
 
-//import js libraries
+// Import JS libraries (non-React)
 import 'jquery/dist/jquery.min.js';
 import 'popper.js/dist/popper.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -19,30 +19,30 @@ import 'lightbox2/dist/js/lightbox.min.js';
 
 import * as serviceWorker from './serviceWorker';
 
-//import components
+// Import components
 import Navbar from './components/navbar.jsx';
 import Intro from './components/intro.jsx';
 import About from './components/about.jsx';
 import Portfolio from './components/portfolio.jsx';
 import Contact from './components/contact.jsx';
 import BackToTop from './components/back-top.jsx';
-import Preloader from './components/preloader';
+import Preloader from './components/preloader.jsx';
 
+// Grab the root element
+const container = document.getElementById('root');
+const root = createRoot(container); // New React 18/19 API
 
+root.render(
+  <React.Fragment>
+    <Navbar />
+    <Intro />
+    <About />
+    <Portfolio />
+    <Contact />
+    <BackToTop />
+    <Preloader />
+  </React.Fragment>
+);
 
-ReactDOM.render(
-    <React.Fragment>
-        <Navbar />
-        <Intro />
-        <About />
-        <Portfolio />
-        <Contact />
-        <BackToTop />
-        <Preloader />
-    </React.Fragment>,
-document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+// Optional: service worker for PWA features
 serviceWorker.unregister();

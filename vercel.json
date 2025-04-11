@@ -3,15 +3,16 @@
     "builds": [
       {
         "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": { 
-          "distDir": "build",
-          "nodeVersion": "14.x"
-        }
+        "use": "@vercel/static-build"
       }
     ],
     "routes": [
-      { "handle": "filesystem" },
-      { "src": "/.*", "dest": "/index.html" }
-    ]
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ],
+    "buildCommand": "npm run build",
+    "outputDirectory": "build"
   }
+  
