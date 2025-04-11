@@ -28,10 +28,10 @@ import Contact from './components/contact.jsx';
 import BackToTop from './components/back-top.jsx';
 import Preloader from './components/preloader.jsx';
 
-// Grab the root element
-const container = document.getElementById('root');
-const root = createRoot(container); // New React 18/19 API
+// Create root using new React 18 API
+const root = createRoot(document.getElementById('root'));
 
+console.log('React app initializing...');
 root.render(
   <React.Fragment>
     <Navbar />
