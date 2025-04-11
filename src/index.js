@@ -31,7 +31,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
-    <h1 style={{ color: 'black', textAlign: 'center', marginTop: '100px' }}>✅ Hello from Joelyn’s Portfolio</h1>,
+    <h1 style={{ color: 'black', textAlign: 'center', marginTop: '100px' }}> Hello from Joelyn’s Portfolio</h1>,
   document.getElementById('root'));
 //     <React.Fragment>
 //         <Navbar />
