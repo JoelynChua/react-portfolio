@@ -1,30 +1,40 @@
 import React from 'react';
 import $ from 'jquery';
-import '../libs/easing.js'
+import '../libs/easing.js';
 
 class BackToTop extends React.Component {
-    componentDidMount(){
-        $('.back-to-top').click(function(){
-            $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-            return false;
-          });
-        window.addEventListener('scroll', ()=>{
-            if(window.pageYOffset > 100){
-                document.querySelector('.back-to-top').classList.remove("fadeOut");
-                document.querySelector('.back-to-top').style.display = "block";
-                document.querySelector('.back-to-top').classList.add("fadeIn");
-            }else {
-                document.querySelector('.back-to-top').classList.remove("fadeIn");
-                document.querySelector('.back-to-top').classList.add("fadeOut");
-            }
-        });
-    }
+  componentDidMount() {
+    $('.back-to-top').click(function (e) {
+      e.preventDefault(); // prevent default anchor behavior
+      $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+    });
 
-    render(){
-        return <a href="#" className="back-to-top animated"><i className="fa fa-chevron-up"></i></a>;
-    }
+    window.addEventListener('scroll', () => {
+      const btn = document.querySelector('.back-to-top');
+      if (btn) {
+        if (window.pageYOffset > 100) {
+          btn.classList.remove('fadeOut');
+          btn.style.display = 'block';
+          btn.classList.add('fadeIn');
+        } else {
+          btn.classList.remove('fadeIn');
+          btn.classList.add('fadeOut');
+        }
+      }
+    });
+  }
+
+  render() {
+    return (
+      <button
+        className="back-to-top animated"
+        aria-label="Back to top"
+        style={{ display: 'none', position: 'fixed', right: '20px', bottom: '20px' }}
+      >
+        <i className="fa fa-chevron-up" aria-hidden="true"></i>
+      </button>
+    );
+  }
 }
 
 export default BackToTop;
-
-

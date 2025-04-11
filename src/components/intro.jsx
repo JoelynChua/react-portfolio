@@ -5,22 +5,22 @@ import Typed from "react-typed";
 class Intro extends React.Component {
   render() {
     return (
-      // <div id="home" className="intro route bg-image " style={{backgroundImage: "url("+bigImage+")"}}>
       <div id="home" className="intro route bg-image background">
-        <div id="stars" />
-        <div id="stars2" />
-        <div id="stars3" />
+        {/* Decorative animated background layers */}
+        <div id="stars" aria-hidden="true" />
+        <div id="stars2" aria-hidden="true" />
+        <div id="stars3" aria-hidden="true" />
 
         <div className="intro-content display-table">
           <div className="table-cell">
-            <div className="container">
+            <div className="container text-center">
               <h1 className="intro-title mb-4">Hello, I am Joelyn Chua</h1>
               <p className="intro-subtitle">
-                <span className="text-slider-items"></span>
+                <span className="text-slider-items" aria-hidden="true"></span>
                 <strong className="text-slider">
                   <Typed
                     strings={[
-                      "Full stack Developer",
+                      "Full Stack Developer",
                       "UI/UX Designer"
                     ]}
                     typeSpeed={80}
@@ -35,6 +35,7 @@ class Intro extends React.Component {
                   className="btn btn-primary btn js-scroll px-4"
                   href="#work"
                   role="button"
+                  aria-label="Scroll to portfolio work section"
                 >
                   View My Work
                 </a>
