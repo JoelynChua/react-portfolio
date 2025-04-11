@@ -10,6 +10,9 @@ class Contact extends Component {
     const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
+    console.log("serviceID:", serviceID);
+    console.log("templateID:", templateID);
+    console.log("publicKey:", publicKey);
     emailjs
       .sendForm(serviceID, templateID, e.target, publicKey)
       .then(
