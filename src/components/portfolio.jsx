@@ -194,7 +194,7 @@ class Portfolio extends React.Component {
                   <a href="https://xd.adobe.com/view/b15296d7-2caf-4e12-bc5c-82ecf75d4937-e401/" target="_blank" rel="noopener noreferrer" className="signup-btn">
                     View
                   </a>
-                  <a href="budget-with-me-app.vercel.app" target="_blank" rel="noopener noreferrer" className="signup-btn">
+                  <a href="https://budget-with-me-app.vercel.app" target="_blank" rel="noopener noreferrer" className="signup-btn">
                     Ionic app
                   </a>
                 </div>
