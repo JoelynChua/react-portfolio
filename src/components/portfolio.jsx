@@ -8,6 +8,7 @@ import stock4 from "../img/app-Images/budgetWithMe.png";
 import stock5 from "../img/app-Images/canCook.png";
 import stock6 from "../img/app-Images/activityAI.png";
 import stock7 from "../img/app-Images/eco-pals.png";
+import stock8 from "../img/app-Images/crops-prediction-website.png";
 
 import "../styles/portfolio.css";
 
@@ -30,6 +31,31 @@ class Portfolio extends React.Component {
           </div>
 
           <div className="row">
+            {/* Card 8 */}
+            <div className="col-md-4">
+              <div className="work-box full-height">
+                <div className="work-img centered-img">
+                  <img src={stock8} alt="Crops prediction" className="img-fluid" />
+                </div>
+                <div className="work-content">
+                  <h2 className="w-title">Crops prediction</h2>
+                  <div className="w-more">
+                    <span className="w-ctegory">
+                    Developed a predictive model to determine the most suitable crop to cultivate based on environmental conditions such as rainfall, pH level etc.
+                      <ul className="tech-list">
+                        <li>Python</li>
+                      </ul>
+                    </span>
+                  </div>
+                </div>
+                <div className="prototype-buttons">
+                  <a href="https://crops-prediction-webapp.onrender.com/" target="_blank" rel="noopener noreferrer" className="signup-btn">
+                    Website
+                  </a>
+                </div>
+              </div>
+            </div>
+
 
             {/* Card 7 */}
             <div className="col-md-4">
@@ -157,6 +183,9 @@ class Portfolio extends React.Component {
                       Simplifies expense tracking using receipt scanning and currency conversion.
                       <ul className="tech-list">
                         <li>Adobe XD</li>
+                        <li>Ionic</li>
+                        <li>Firebase</li>
+                        <li>Typescript</li>
                       </ul>
                     </span>
                   </div>
@@ -164,6 +193,9 @@ class Portfolio extends React.Component {
                 <div className="prototype-buttons">
                   <a href="https://xd.adobe.com/view/b15296d7-2caf-4e12-bc5c-82ecf75d4937-e401/" target="_blank" rel="noopener noreferrer" className="signup-btn">
                     View
+                  </a>
+                  <a href="budget-with-me-app.vercel.app" target="_blank" rel="noopener noreferrer" className="signup-btn">
+                    Ionic app
                   </a>
                 </div>
               </div>
